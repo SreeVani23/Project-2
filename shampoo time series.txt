@@ -58,7 +58,7 @@ length(shampoo$Sales)
 
 
 #prediction
-arima_101_ml <- arima(shampoo.ts,order=c(0,1,2),method='ML')
+arima_012_ml <- arima(shampoo.ts,order=c(0,1,2),method='ML')
 coeftest(arima_012_ml)
 auto.arima(shampoo.ts)
 fit=Arima(shampoo.ts,c(0,1,2))
