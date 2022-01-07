@@ -56,6 +56,12 @@ res2 = armasubsets(y=diff.shampoo.1,nar=10,nma=10,y.name='test',ar.method='ols')
 plot(res2)
 length(shampoo$Sales)
 
+#train and test
+train<-ts(shampoo.ts[1:24],start=2000,frequency = 12)
+train
+test<-ts(shampoo.ts[25:26],start=2000,frequency = 12)
+test
+
 
 #prediction
 arima_012_ml <- arima(shampoo.ts,order=c(0,1,2),method='ML')
