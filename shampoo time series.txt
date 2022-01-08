@@ -83,3 +83,6 @@ pred<-predict(arima_012_ml,n.ahead = 12,newxreg = NULL,se.fit=TRUE)
 #MAPE
 map<-round(MAPE(shampoo.ts[13:24],pred),3)
 map
+
+
+
