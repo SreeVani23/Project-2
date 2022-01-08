@@ -42,13 +42,20 @@ k = trunc((length(shampoo.ts)-1)^(1/3)))
 #checking seasonality when D=0
 dif=diff(shampoo.ts)
 plot(dif)
+acf(dif)
+pacf(dif)
 adf.test(dif)
-
+tsdisplay(dif)
 
 #checking seasonality when D=1
-diff.shampoo.1 = diff(dif)
-plot(diff.shampoo.1,type='o',ylab='Sales Count of Shampoo')
-adf.test(diff.shampoo.1)
+dif2=diff(dif)
+dif2
+plot(dif2)
+autoplot(dif2)
+acf(dif2)
+pacf(dif2)
+adf.test(dif2)
+tsdisplay(dif2)
 
 par(mfrow=c(1,1))
 res2 = armasubsets(y=diff.shampoo.1,nar=10,nma=10,y.name='test',ar.method='ols')
